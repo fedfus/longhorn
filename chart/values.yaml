@@ -129,9 +129,10 @@ longhornManager:
   #   operator: "Equal"
   #   value: "value"
   #   effect: "NoSchedule"
-  nodeSelector: ~
+  nodeSelector: 
   ## If you want to set node selector for Longhorn Manager DaemonSet, delete the `{}` in the line above
   ## and uncomment this example block
+     storage: "longhorn"
   #  label-key1: "label-value1"
   #  label-key2: "label-value2"
 
@@ -144,7 +145,8 @@ longhornDriver:
   #   operator: "Equal"
   #   value: "value"
   #   effect: "NoSchedule"
-  nodeSelector: ~
+  nodeSelector: 
+     storage: "longhorn"
   ## If you want to set node selector for Longhorn Driver Deployer Deployment, delete the `{}` in the line above
   ## and uncomment this example block
   #  label-key1: "label-value1"
@@ -159,7 +161,8 @@ longhornUI:
   #   operator: "Equal"
   #   value: "value"
   #   effect: "NoSchedule"
-  nodeSelector: ~
+  nodeSelector: 
+     storage: "longhorn"
   ## If you want to set node selector for Longhorn UI Deployment, delete the `{}` in the line above
   ## and uncomment this example block
   #  label-key1: "label-value1"
