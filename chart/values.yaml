@@ -47,6 +47,7 @@ service:
   ui:
     type: ClusterIP
     nodePort: null
+    port: null
   manager:
     type: ClusterIP
     nodePort: ""

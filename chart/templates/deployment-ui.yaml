@@ -83,7 +83,11 @@ spec:
     app: longhorn-ui
   ports:
   - name: http
+    {{- if .Values.service.ui.port }}
+    port: {{ .Values.service.ui.port }}
+    {{- else }}
     port: 80
+    {{- end }}
     targetPort: http
     {{- if .Values.service.ui.nodePort }}
     nodePort: {{ .Values.service.ui.nodePort }}
